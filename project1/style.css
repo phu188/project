@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary_color :rgb(244, 105, 19);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to right,rgb(239, 139, 17),rgb(43, 42, 42));
+    font-family: "Poppins";
+}
+.product_card{
+    background-color: white;
+    margin: 120px auto;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+.pHeart, .pcart{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+.pHeart :hover, .pcart:hover{
+    transform: scale(1.2);
+    
+}
+.pcart{
+    left: unset;
+    right: 20px;
+   
+}
+.pimg{
+    width: 90%;
+
+    transition: 0.5s;
+}
+.pimg img{
+    margin-top: 93px;
+    width: 100%;
+    margin-left: 4px;
+    height: 100%;
+    object-fit: cover;
+}
+.ptitle,.pprice{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+.ptitle{
+    color: var(--primary_color);
+}
+.pcolor, .psize{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.psize span{
+    color: black;
+    background: orange;
+    padding: 1px 10px;
+    border-radius: 5px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+.psize span:hover,.pcolor span:hover{
+    transform: scale(0.9);
+}
+.pcolor span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+.Color_orange{
+    background: orange;
+}
+.Color_red{
+    background: red;
+}
+.Color_black{
+    background: black;
+}
+.paction button{
+    background: var(--primary_color);
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+.paction button:hover{
+    transform: scale(0.9);
+}
+.product_card:hover .pimg{
+    transform: translateY(-80px) rotate(-16deg);
+
+}
+.product_card:hover .ptitle,.product_card:hover .pprice{
+   transform: translate(-20px,-70px);
+
+}
+
+.psize{
+    margin-top: 150px;
+}
+.psize, .pcolor,.paction{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+
+    
+}
+
+.product_card:hover .psize,.product_card:hover .pcolor,.product_card:hover .paction{
+    visibility: visible;
+    opacity: 100;
+
+   transform: translate(30px,-190px);
+}
+
+
+
